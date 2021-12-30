@@ -1,4 +1,4 @@
-/* colors - see style guide for docs. 
+/* colors - see style guide for docs.
 Clearly there is more you could place in variables, up to you if you want to use them. My answer does not go beyond colors to keep the code easier to read. */
 
 :root {
@@ -46,7 +46,7 @@ section h2 {
 
 
 /*****************
-New styles begin here and continue to the end of the page 
+New styles begin here and continue to the end of the page
 ****************/
 
 section ul {
@@ -56,7 +56,7 @@ section ul {
 }
 
 
-/* To keep mobile screens from being stupid long, consider setting a max height on the images and hide the overflow. 
+/* To keep mobile screens from being stupid long, consider setting a max height on the images and hide the overflow.
 
 Spelled out the individual border styles so border-color could go elsewhere. Styling is the same for all borders except the color. */
 
@@ -140,10 +140,26 @@ figcaption a {
     color: var(--color8);
 }
 
-
 /* turn on flexbox here - prior to this, elements stacked individually as blocks */
 
 @media (min-width: 550px) {
+    section h2 {
+        margin: 1rem 0;
+        text-align: left;
+    }
+    .row {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+    .row p {
+        padding: 2rem;
+        order: 2;
+        flex-basis: 45%;
+    }
+    .row img {
+        flex-basis: 45%;
+    }
     section ul {
         display: flex;
         flex-flow: row wrap;
@@ -163,6 +179,13 @@ figcaption a {
         margin-left: 100px;
     }
     section li {
+        flex-basis: 32.5%;
+    }
+    .row p {
+        order: 2;
+        flex-basis: 64.5%;
+    }
+    .row img {
         flex-basis: 32.5%;
     }
 }
